@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>908H // ADMIN</title>
+<style>
+body{background:#000;color:#ff0040;font-family:monospace;display:flex;align-items:center;justify-content:center;height:100vh}
+.box{border:1px solid #ff0040;padding:30px;box-shadow:0 0 20px #ff0040;width:90%;max-width:500px;text-align:center}
+input{width:100%;padding:10px;background:#000;border:1px solid #ff0040;color:#ff0040;margin-top:10px}
+button{margin-top:15px;padding:10px 20px;background:#ff0040;color:#000;border:none;cursor:pointer;width:100%;font-weight:bold}
+#panel{display:none}
+h2{letter-spacing:3px}
+</style>
+</head>
+<body>
+<div class="box">
+<div id="login">
+<h2>908H ADMIN</h2>
+<p style="opacity:.6">Giriş için şifre gir</p>
+<input type="password" id="pass" placeholder="Şifre">
+<button onclick="check()">GİRİŞ</button>
+<p id="err" style="color:red;display:none;margin-top:10px">Hatalı şifre!</p>
+</div>
+<div id="panel">
+<h2>HOŞGELDİN 908H</h2>
+<p>> ERİŞİM VERİLDİ</p>
+<p style="margin-top:10px">Bu panel XMENQ tarafından kuruldu</p>
+<p style="margin-top:20px;font-size:30px">🫏</p>
+<p style="opacity:.5;margin-top:10px">Şifren: ben eşeğim</p>
+</div>
+</div>
+<script>
+function check(){
+ if(document.getElementById('pass').value.toLowerCase()==='ben eşeğim'){
+   document.getElementById('login').style.display='none';
+   document.getElementById('panel').style.display='block';
+ }else{
+   document.getElementById('err').style.display='block';
+ }
+}
+</script>
+</body>
+</html>
